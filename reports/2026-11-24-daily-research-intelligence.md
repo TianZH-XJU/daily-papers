@@ -561,9 +561,19 @@ WeMM-Ecom、Typhoon OCR 2、SAVIOR、VIVID、Prism、ViDiHand2 和 ApexID 展示
 8. **对业界的贡献：** 对知识型 RL、事实核验奖励和模型拒答校准提出重要风险提示。
 9. **独立评判：** 这是值得认真对待的训练安全问题，但具体效应仍依赖任务、奖励和模型配方；应在生产模型的持续训练中加入反事实事实核查与遗忘测试。
 
-### 39. [LLMs and Cultural/Visual Reasoning: Polytropos, VIVID, UUBench 等相关方向的共同观察]
+### 39. [GameAnything: From Any Inspirations to Playable Game Worlds](https://arxiv.org/abs/2611.29238) · [GitHub](https://github.com/AetherLabsAI/GameAnything)
 
-这不是独立论文条目，而是对上述多模态研究的横向观察：视觉模型的瓶颈正在从“能否识别输入”转向“是否保留输入中的关键证据”。Polytropos 关注文化对象特异性，VIVID 关注 value 中的视觉内容，Seeing Right, Writing Wrong 关注推理文本是否覆盖图像证据，UUBench 关注用户未明说的沟通线索。产业系统应当保留可追溯的视觉/音频证据，而不是只保存模型最终生成的文字结论。
+1. **针对什么问题：** 现有 AI 游戏开发系统多从明确的文字规格出发，难以把图片、故事、记忆等多模态灵感转成真正可玩的游戏扩展。
+2. **受到什么启发：** 游戏开发不只是生成素材，还需要持续试玩、发现交互问题并迭代修复；代码 Agent 与独立 playtesting critic 可以形成闭环。
+3. **提出什么方法：** GameAnything 将 coding agents、独立 playtesting critic、持久开发状态和可复用经验记忆整合为开放平台，并提出 GameAnything-Bench。
+4. **方法特点：** 输入可以是多模态参考，目标是扩展已有游戏世界；评测同时看功能正确性与实际游玩体验。
+5. **实验怎么设计：** 在不同参考模态、游戏环境和创作目标上比较九种 coding agent 配置，并测试多模态参考与迭代改进的作用。
+6. **实验结果：** 当前 Agent 能较好适配参考内容，但在可玩交互和精确修改上仍有困难；多模态参考提高内容保真度，迭代优化带来幅度不一的收益。
+7. **得到什么结论：** 多模态灵感到可玩世界的自动化已初具可行性，但功能正确不等于玩法质量。
+8. **对业界的贡献：** 对游戏原型生成、关卡扩展、互动叙事和 UGC 创作平台有潜在价值。
+9. **独立评判：** 方向有吸引力，真正难点是游戏状态、物理交互和主观可玩性的联合评价；需要更多玩家盲测，而不能只依赖 Agent 自己的 critic。
+
+**代码核验：** README 显示支持多种 coding agent，提供项目运行入口、Skill 和独立 benchmark 仓库链接；完整评测数据与代码分开维护，复现时要同时固定 Agent 版本和游戏环境版本。
 
 # C. Agent、软件工程、记忆与工具系统
 
